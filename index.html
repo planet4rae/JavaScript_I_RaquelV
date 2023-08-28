@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESUPUESTO RAQUEL</title>
+    <link rel="stylesheet" href="/Javascript/presupuesto_raquel/css/estilos.css">
+</head>
+
+<body>
+    <header>
+<!-- CABECERO ------------------------------------------------------------------------------------------>
+    <!-- Crea un div en el que utilices la clase cabecero del css provisto. -->
+        <div class="cabecero">
+
+    <!-- Dentro de este, crea un div con la clase presupuesto y su valor. -->
+            <div class="presupuesto">
+                <div class="presupuesto_titulo">Presupuesto Disponible</div>
+                <div class="presupuesto_valor">$2,000.00</div>
+
+    <!-- Crea otro div con las clases presupuesto_ingreso y limpiarEstilos y, dentro de este div, crea dos div que tienen el presupuesto de ingreso valor y otro de porcentaje -->
+                <div class="presupuesto_ingreso limpiarEstilos">
+                    <div class="presupuesto_ingreso--texto">INGRESOS</div>
+                    <div class="derecha">
+                        <div class="presupuesto_ingreso--valor" id="presupuesto_ingreso--valor">0.00</div>
+                        <div class="presupuesto_ingreso--porcentaje">0%</div>
+                    </div>
+                </div>
+
+    <!-- Crea un div con las clases presupuesto_egreso y limpiarEstilos y, dentro de este div, crea dos div que tienen el presupuesto de egreso valor y otro de porcentaje -->
+                <div class="presupuesto_egreso limpiarEstilos">
+                    <div class="presupuesto_egreso--texto">EGRESOS</div>
+                    <div class="derecha limpiarEstilos">
+                        <div class="presupuesto_egreso--valor" id="presupuesto_egreso--valor">0.00</div>
+                        <div class="presupuesto_egreso--porcentaje">45%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<!-- FORM --------------------------------------------------------------------------------------------->
+    <!-- Crea un formulario con un contenedor-->
+    <form id="forma">
+        <div class="agregar">
+            <div class="agregar_contenedor">
+
+    <!-- Opciones de + para Ingreso y de - para Egreso -->
+                <select class="agregar_tipo" id="tipo">
+                    <option selected value="ingreso">+</option>
+                    <option value="egreso">-</option>
+                </select>
+
+    <!--  placeholder para agregar información como descripción y su valor-->
+                <input type="text" class="agregar_descripcion" placeholder="Agregar Descripción" id="descripcion">
+                <input type="number" class="agregar_valor" placeholder="" id="valor" value="" step="any">
+    <!-- Botón para agregar al resultado   -->
+                <button class="agregar_btn" id="agregarbtn" type="button">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+<!-- CONTENEDOR ---------------------------------------------------------------------------------------->
+    <main class="contenedor limpiarEstilos">
+
+    <!-- DATOS DE INGRESO-->
+        <div class="ingreso">
+            <h2 class="ingreso_titulo">Ingresos</h2>
+            <div id="lista-ingresos">
+
+            </div>
+        </div>
+
+        <!-- <button onclick="sumar()">Sumar</button> -->
+
+    <!--DATOS DE EGRESO-->
+        <div class="egreso">
+            <h2 class="egreso_titulo">Egresos</h2>
+            <div id="lista-egresos">
+                                                    
+            </div>
+        </div>
+
+    </main>
+<!---------------------------------------------------------------------------------------------------------->
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script src="/Javascript/presupuesto_raquel/js/app.js"></script>
+    <script src="/Javascript/presupuesto_raquel/js/Dato.js"></script>
+    <script src="/Javascript/presupuesto_raquel/js/Egreso.js"></script>
+    <script src="/Javascript/presupuesto_raquel/js/Ingreso.js"></script>
+</body>
+
+</html>
