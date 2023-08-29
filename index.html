@@ -17,14 +17,14 @@
     <!-- Dentro de este, crea un div con la clase presupuesto y su valor. -->
             <div class="presupuesto">
                 <div class="presupuesto_titulo">Presupuesto Disponible</div>
-                <div class="presupuesto_valor">$2,000.00</div>
+                <div class="presupuesto_valor" id="presupuestoTotal">0.00</div>
 
     <!-- Crea otro div con las clases presupuesto_ingreso y limpiarEstilos y, dentro de este div, crea dos div que tienen el presupuesto de ingreso valor y otro de porcentaje -->
                 <div class="presupuesto_ingreso limpiarEstilos">
                     <div class="presupuesto_ingreso--texto">INGRESOS</div>
                     <div class="derecha">
                         <div class="presupuesto_ingreso--valor" id="presupuesto_ingreso--valor">0.00</div>
-                        <div class="presupuesto_ingreso--porcentaje">0%</div>
+                        <div class="presupuesto_ingreso--porcentaje" id="presupuesto_ingreso--porcentaje"></div>
                     </div>
                 </div>
 
@@ -33,7 +33,7 @@
                     <div class="presupuesto_egreso--texto">EGRESOS</div>
                     <div class="derecha limpiarEstilos">
                         <div class="presupuesto_egreso--valor" id="presupuesto_egreso--valor">0.00</div>
-                        <div class="presupuesto_egreso--porcentaje">45%</div>
+                        <div class="presupuesto_egreso--porcentaje" id="presupuesto_egreso--porcentaje">0%</div>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
 
 <!-- FORM --------------------------------------------------------------------------------------------->
     <!-- Crea un formulario con un contenedor-->
-    <form id="forma">
+    <form id="forma" id="forma">
         <div class="agregar">
             <div class="agregar_contenedor">
 
