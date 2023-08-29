@@ -4,17 +4,17 @@ document.getElementById("agregarbtn").addEventListener("click", (e) => {
     var tipo_resultado = tipo.value;
     if (tipo_resultado == "egreso") {
         ing = ing + 1;
-        var nameid = "elemento" + ing; //hay un error al salir con egreso y salen cuadros vacios en igreso, por eso está como nameid y no nameId
+        var nameid = "elemento" + ing; //hay un error al salir con egreso y salen cuadros vacios en ingreso, por eso está como nameid y no nameId
         var div1 = document.createElement("div");
         div1.className = "elemento limpiarEstilos";
         div1.id = nameId;
         document.getElementById("lista-ingresos").appendChild(div1);
 
         //crear descripcion para que salga en HTMl
-        var descricion = document.getElementById("descripcion").value;
+        var descripcion = document.getElementById("descripcion").value;
         var div2 = document.createElement("div");
         div2.className = "elemento_descripcion";
-        div2.innerHTML = descricion;
+        div2.innerHTML = descripcion;
         div2.id = nameId;
         document.getElementById(nameId).appendChild(div2);
 
